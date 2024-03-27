@@ -1,0 +1,8 @@
+*.sqlite3
+
+.idea
+bookr/__pycache__/
+reviews/__pycache__/
+/.venv/
+
+/reviews/migrations/
