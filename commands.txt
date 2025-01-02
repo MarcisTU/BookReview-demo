@@ -1,0 +1,3 @@
+# When Django Models are created/modified run these commands:
+- python manage.py makemigrations
+- python manage.py migrate
