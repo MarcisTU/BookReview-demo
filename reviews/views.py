@@ -5,7 +5,8 @@ from .utils import average_rating
 
 
 def index(request):
-    return render(request, 'base.html')
+    name = "Marcis"
+    return render(request, 'reviews/base.html', {"name": name})
 
 def book_search(request):
     search_text = request.GET.get("search", "")

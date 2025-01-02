@@ -53,7 +53,7 @@ class Review(models.Model):
     """A review of a book."""
     content = models.TextField(help_text="The review text.")
     rating = models.IntegerField(help_text="The rating the reviewer has given the book.")
-    date_created = models.DateField(auto_now_add=True, help_text="The date the review was created.")
-    date_edited = models.DateField(null=True, help_text="The date the review was last edited.")
+    date_created = models.DateTimeField(auto_now_add=True, help_text="The date the review was created.")
+    date_edited = models.DateTimeField(null=True, help_text="The date the review was last edited.")
     creator = models.ForeignKey(auth.get_user_model(), on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE, help_text="The book this review is for.")
